@@ -1,5 +1,5 @@
 {
-    "reqwrites": [
+    "rewrites": [
         {
             "source": "/(.*)",
             "destination": "/index.html"
