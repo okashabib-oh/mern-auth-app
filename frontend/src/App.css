@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #151515;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-form {
+    position: relative;
+    width: 370px;
+    height: auto;
+    background: #1b1b1b;
+    padding: 40px 35px 60px;
+    box-sizing: border-box;
+    border: 1px solid #339933;
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px #272727;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text {
+    font-size: 30px;
+    color: #c7c7c7;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+    margin-top: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form .field {
+    margin-top: 20px;
+    display: flex;
+}
+
+.field .fas {
+    height: 50px;
+    width: 60px;
+    color: #868686;
+    font-size: 20px;
+    line-height: 50px;
+    border: 1px solid #444;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    background: linear-gradient(#333, #222);
+}
+
+.field input,
+form button {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 19px;
+    color: #868686;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #444;
+    caret-color: #339933;
+    background: linear-gradient(#333, #222);
+}
+
+input:focus {
+    color: #339933;
+    box-shadow: 0 0 5px rgba(0, 255, 0, .2),
+        inset 0 0 5px rgba(0, 255, 0, .1);
+    background: linear-gradient(#333933, #222922);
+    animation: glow .8s ease-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        border-color: #339933;
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2),
+            inset 0 0 5px rgba(0, 0, 0, .1);
+    }
+
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0, 255, 0, .6),
+            inset 0 0 10px rgba(0, 255, 0, .4);
+    }
+}
+
+button {
+    margin-top: 30px;
+    border-radius: 5px !important;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+button:hover {
+    color: #339933;
+    border: 1px solid #339933;
+    box-shadow: 0 0 5px rgba(0, 255, 0, .3),
+        0 0 10px rgba(0, 255, 0, .2),
+        0 0 15px rgba(0, 255, 0, .1),
+        0 2px 0 black;
+}
+
+.link {
+    margin-top: 25px;
+    color: #868686;
+}
+
+.link a {
+    color: #339933;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+.logout{
+    border: none;
+    padding: 12px;
+    border: 2px solid seagreen;
+    background-color: #6f6;
+    color: rgb(53, 53, 53);
+}
+h2{
+    margin-top: 16px;
+    color: #c7c7c7;
+    text-decoration: underline double;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+    align-items: center;
+    background-color: #868686;
+    padding: 5px;
+    border-radius: 5px;
+    color: whitesmoke;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.878), 0 4px 6px -4px rgba(255, 209, 209, 0.1);
 }
